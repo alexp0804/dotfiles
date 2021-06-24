@@ -1,3 +1,11 @@
+#  .oo.  .oo      88               oooo   o8o                                        
+# P'  `YP'       .8'               `888   `"'                                        
+#               .8'       .oooo.    888  oooo   .oooo.    .oooo.o  .ooooo.   .oooo.o 
+#              .8'       `P  )88b   888  `888  `P  )88b  d88(  "8 d88' `88b d88(  "8 
+#             .8'         .oP"888   888   888   .oP"888  `"Y88b.  888ooo888 `"Y88b.  
+#            .8'     .o. d8(  888   888   888  d8(  888  o.  )88b 888    .o o.  )88b 
+#            88      Y8P `Y888""8o o888o o888o `Y888""8o 8""888P' `Y8bod8P' 8""888P' 
+                                                                                   
 alias clea='clear'
 alias grep='grep --color=auto'
 alias ff='vim -o `fzf`'

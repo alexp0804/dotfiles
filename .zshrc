@@ -1,3 +1,11 @@
+#  .oo.  .oo      88                         oooo
+# P'  `YP'       .8'                         `888
+#               .8'        oooooooo  .oooo.o  888 .oo.   oooo d8b  .ooooo.
+#              .8'        d'""7d8P  d88(  "8  888P"Y88b  `888""8P d88' `"Y8
+#             .8'           .d8P'   `"Y88b.   888   888   888     888
+#            .8'     .o.  .d8P'  .P o.  )88b  888   888   888     888   .o8
+#            88      Y8P d8888888P  8""888P' o888o o888o d888b    `Y8bod8P'
+
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 # Alias file

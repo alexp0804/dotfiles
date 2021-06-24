@@ -1,5 +1,15 @@
 #!/usr/bin/env sh
 
+#  .oo.  .oo      88                            .o8                  o8o                     
+# P'  `YP'       .8'                           "888                  `"'                     
+#               .8'      oooo    ooo  .oooo.    888oooo.   .oooo.   oooo  oooo d8b  .ooooo.  
+#              .8'        `88.  .8'  `P  )88b   d88' `88b `P  )88b  `888  `888""8P d88' `"Y8 
+#             .8'          `88..8'    .oP"888   888   888  .oP"888   888   888     888       
+#            .8'     .o.    `888'    d8(  888   888   888 d8(  888   888   888     888   .o8 
+#            88      Y8P     .8'     `Y888""8o  `Y8bod8P' `Y888""8o o888o d888b    `Y8bod8P' 
+#                        .o..P'                                                              
+#                        `Y8P'                                                               
+
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
