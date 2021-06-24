@@ -1,5 +1,4 @@
 
-
 "   .oo.  .oo      88                  o8o
 " P'  `YP'       .8'                  `"'
 "               .8'      oooo    ooo oooo  ooo. .oo.  .oo.   oooo d8b  .ooooo.
@@ -58,14 +57,12 @@ set laststatus=2
 set autowrite           " Save file after switching to another file
 set noerrorbells
 
-" Highlight current line when in insert mode.
-" autocmd InsertLeave,InsertEnter * set cul!
+" Set cursor to block when entering vim
 autocmd VimEnter * silent !echo -ne '\e[0 q'
-autocmd InsertLeave * set nocul
-autocmd InsertEnter * set cul
 
 set nospell             " Default off, 'set spell' to turn on
 set spelllang=en_us
+
 " ~~~~~~~~~~~~~~~ Plugins ~~~~~~~~~~~~~~~ "
 call plug#begin('~/.vim/plugged')
 
@@ -94,13 +91,10 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 " ~~~~~~~~~~~~~~~ Colors ~~~~~~~~~~~~~~~~ "
 " Syntax coloring
-"colorscheme onedark
-"colorscheme bitterjug
 colorscheme spacegray
-
 
 " Use terminal colors for fg, bg, etc
 " It's important that you place these lines after colorscheme assignment to
-" overwrite.
+" overwrite it's bg and fg.
 highlight LineNr ctermfg=NONE ctermbg=NONE
 highlight Normal ctermbg=NONE
