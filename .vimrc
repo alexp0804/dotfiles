@@ -58,7 +58,7 @@ set autowrite           " Save file after switching to another file
 set noerrorbells
 
 " Set cursor to block when entering vim
-autocmd VimEnter * silent !echo -ne '\e[0 q'
+" autocmd VimEnter * silent !echo -ne '\e[0 q'
 
 set nospell             " Default off, 'set spell' to turn on
 set spelllang=en_us
@@ -91,7 +91,8 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 " ~~~~~~~~~~~~~~~ Colors ~~~~~~~~~~~~~~~~ "
 " Syntax coloring
-colorscheme spacegray
+" colorscheme spacegray
+colorscheme nord
 
 " Use terminal colors for fg, bg, etc
 " It's important that you place these lines after colorscheme assignment to
