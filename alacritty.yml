@@ -1,12 +1,12 @@
- #           oooo                                o8o      .       .                                                 oooo  
- #           `888                                `"'    .o8     .o8                                                 `888  
- #  .oooo.    888   .oooo.    .ooooo.  oooo d8b oooo  .o888oo .o888oo oooo    ooo     oooo    ooo ooo. .oo.  .oo.    888  
- # `P  )88b   888  `P  )88b  d88' `"Y8 `888""8P `888    888     888    `88.  .8'       `88.  .8'  `888P"Y88bP"Y88b   888  
- #  .oP"888   888   .oP"888  888        888      888    888     888     `88..8'         `88..8'    888   888   888   888  
- # d8(  888   888  d8(  888  888   .o8  888      888    888 .   888 .    `888'    .o.    `888'     888   888   888   888  
- # `Y888""8o o888o `Y888""8o `Y8bod8P' d888b    o888o   "888"   "888"     .8'     Y8P     .8'     o888o o888o o888o o888o 
- #                                                                    .o..P'          .o..P'                              
- #                                                                    `Y8P'           `Y8P'                               
+ #           oooo                                o8o      .       .                                                 oooo
+ #           `888                                `"'    .o8     .o8                                                 `888
+ #  .oooo.    888   .oooo.    .ooooo.  oooo d8b oooo  .o888oo .o888oo oooo    ooo     oooo    ooo ooo. .oo.  .oo.    888
+ # `P  )88b   888  `P  )88b  d88' `"Y8 `888""8P `888    888     888    `88.  .8'       `88.  .8'  `888P"Y88bP"Y88b   888
+ #  .oP"888   888   .oP"888  888        888      888    888     888     `88..8'         `88..8'    888   888   888   888
+ # d8(  888   888  d8(  888  888   .o8  888      888    888 .   888 .    `888'    .o.    `888'     888   888   888   888
+ # `Y888""8o o888o `Y888""8o `Y8bod8P' d888b    o888o   "888"   "888"     .8'     Y8P     .8'     o888o o888o o888o o888o
+ #                                                                    .o..P'          .o..P'
+ #                                                                    `Y8P'           `Y8P'
 
 window:
   # Number of lines/columns (not pixels)
@@ -14,10 +14,10 @@ window:
     columns: 130
     lines: 50
 
-  # Blank space around pixels 
+  # Blank space around pixels
   padding:
-    x: 9
-    y: 15
+    x: 12
+    y: 9
 
   # Values for `decorations`:
   #     - full: Borders and title bar
@@ -42,26 +42,26 @@ scrolling:
 # Font used is Iosevka Term
 font:
   normal:
-    family: "Iosevka Term"
+    family: "JetBrains Mono"
     style: Regular
 
   bold:
-    family: "Iosevka Term"
+    family: "JetBrains Mono"
     style: Bold
 
   italic:
-    family: "Iosevka Term"
+    family: "JetBrains Mono"
     style: Italic
 
   bold_italic:
-    family: "Iosevka Term"
+    family: "JetBrains Mono"
     style: Bold Italic
 
   size: 18.0
 
   offset:
     x: 0
-    y: -1
+    y: 0
 
 # Slight opacity to terminal window
 background_opacity: 0.95

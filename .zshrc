@@ -36,6 +36,6 @@ echo -ne '\e[5 q' # Use block shape cursor on startup
 preexec() { echo -ne '\e[5 q' ;} # Use block shape cursor for each new prompt
 
 
-# PROMPT="%1d $ "
-PROMPT="❴ %B%n@%m:%b %~ ❵ "$'\n'"     ⟹   "
+PROMPT="%1d $ "
+# PROMPT="❴ %B%n@%m:%b %~ ❵ "$'\n'"     ⟹   "
 
