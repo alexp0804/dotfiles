@@ -46,9 +46,15 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
-" Navigate wrapped lines
-noremap j gj
-noremap k gk
+" For line jumps over 5 lines (like '5j' or '8k'), ignore wrapped lines. Otherwise, map j and k to
+" gj and gk to navigate wrapped lines as expected.
+" This is important for relative line use, as the mapping of j to gj and the
+" same for k, will cause relative line jumps to work incorrectly
+nnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
+nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
+
+" Double escape clears highlighting from search
+nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc> 
 
 " ~~~~~~~~~~~~~ Status Line ~~~~~~~~~~~~~ "
 set laststatus=2
@@ -91,11 +97,15 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 " ~~~~~~~~~~~~~~~ Colors ~~~~~~~~~~~~~~~~ "
 " Syntax coloring
-" colorscheme spacegray
-colorscheme nord
+colorscheme spacegray
+"colorscheme nord
+" colorscheme gruvbox
 
 " Use terminal colors for fg, bg, etc
 " It's important that you place these lines after colorscheme assignment to
 " overwrite it's bg and fg.
 highlight LineNr ctermfg=NONE ctermbg=NONE
 highlight Normal ctermbg=NONE
+
+set t_Co=256
+

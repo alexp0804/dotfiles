@@ -25,6 +25,13 @@ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 # Easily open a file in vim with fuzzyfinder
 alias ff='vim -o `fzf`'
 
+# Load tmux with the config file moved into .config
+alias tn='tmux -f ~/.config/tmux/.tmux.conf new'
+
+# Easily load vimrc
+alias vrc='vim ~/.vimrc'
+
 # Prompt user if they actually want to delete/move selected file
 alias rm='rm -i'
 alias mv='mv -i'
+

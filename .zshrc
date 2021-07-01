@@ -39,3 +39,4 @@ preexec() { echo -ne '\e[5 q' ;} # Use block shape cursor for each new prompt
 PROMPT="%1d $ "
 # PROMPT="❴ %B%n@%m:%b %~ ❵ "$'\n'"     ⟹   "
 
+if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi
