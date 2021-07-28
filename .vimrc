@@ -54,10 +54,20 @@ nnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
 nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
 
 " Double escape clears highlighting from search
-nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc> 
+nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
+
+
+" Smooth scroll up and down 
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 5, 1)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 5, 1)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 5, 2)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 5, 2)<CR>
+
+
 
 " ~~~~~~~~~~~~~ Status Line ~~~~~~~~~~~~~ "
 set laststatus=2
+set noshowmode
 
 " ~~~~~~~~~~~~~~~~~ Misc ~~~~~~~~~~~~~~~~ "
 set autowrite           " Save file after switching to another file
@@ -68,6 +78,13 @@ set noerrorbells
 
 set nospell             " Default off, 'set spell' to turn on
 set spelllang=en_us
+
+" Jump to placeholder, delete it and enter insert mode
+map <leader><space> /<++><CR>c4l
+
+" Make curly brackets and enter insert mode
+map <leader>] o{<Enter><Enter>}<C-g>k<C-I>
+
 
 " ~~~~~~~~~~~~~~~ Plugins ~~~~~~~~~~~~~~~ "
 call plug#begin('~/.vim/plugged')
@@ -81,12 +98,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-surround'                               " Surrounding characters
     Plug 'scrooloose/syntastic'                             " Syntax checking
     Plug 'valloric/youcompleteme'                           " Auto completion
+    Plug 'terryma/vim-smooth-scroll'                        " Smooth scrolling
 
 call plug#end()
 
 " ~~~~~~~~~~~~~ Status Line ~~~~~~~~~~~~~ "
 set laststatus=2
-let g:airline_theme='minimalist'
+let g:airline_theme='onedark'
 let g:airline_detect_spell=1
 let g:airline_section_z=''
 let g:airline_sections_errors=''
@@ -97,13 +115,9 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 " ~~~~~~~~~~~~~~~ Colors ~~~~~~~~~~~~~~~~ "
 " Syntax coloring
-colorscheme spacegray
-"colorscheme nord
-" colorscheme gruvbox
+colorscheme onedark
 
 " Use terminal colors for fg, bg, etc
-" It's important that you place these lines after colorscheme assignment to
-" overwrite it's bg and fg.
 highlight LineNr ctermfg=NONE ctermbg=NONE
 highlight Normal ctermbg=NONE
 
