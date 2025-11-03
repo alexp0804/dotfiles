@@ -12,6 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    spec = "alex.lazy",
+    spec = {
+        { import = "alex.plugins" },
+    },
     change_detection = { notify = false }
 })
