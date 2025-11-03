@@ -9,7 +9,6 @@ sudo apt upgrade
 
 sudo apt install zsh
 sudo apt install vim
-sudo apt install neovim
 sudo apt install git
 sudo apt install ssh
 
