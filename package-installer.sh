@@ -28,6 +28,11 @@ sudo apt install curl
 sudo apt install wget
 sudo apt install fastfetch
 
+# neovim dependencies
+sudo apt install node npm
+sudo apt install ruby gem
+sudo apt install luarocks
+
 sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
