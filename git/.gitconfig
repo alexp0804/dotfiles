@@ -1,0 +1,15 @@
+[user]
+	name = Alexander Peterson
+	email = for.alexpeterson@gmail.com
+[core]
+	editor = vim
+	whitespace = error
+[pull]
+	rebase = true
+[status]
+	branch = true
+	short = true
+	showStash = true
+	showUntrackedFiles = all
+[init]
+	defaultBranch = main
