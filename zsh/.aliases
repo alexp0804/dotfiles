@@ -1,0 +1,4 @@
+alias neofetch='fastfetch'
+alias cat='batcat'
+alias ls='eza --color=auto --group-directories-first -A --icons=auto --git' 
+alias tree='ls --tree'
