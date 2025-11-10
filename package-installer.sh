@@ -32,6 +32,10 @@ sudo apt install node npm
 sudo apt install ruby gem
 sudo apt install luarocks
 
+# latex stuff
+sudo apt install latexmk
+sudo apt install texlive-science
+
 sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
