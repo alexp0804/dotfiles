@@ -31,6 +31,7 @@ sudo apt install fastfetch
 sudo apt install node npm
 sudo apt install ruby gem
 sudo apt install luarocks
+sudo apt install xclip
 
 # latex stuff
 sudo apt install latexmk
