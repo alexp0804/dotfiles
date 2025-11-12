@@ -1,16 +1,18 @@
 return {
-    "williamboman/mason-lspconfig.nvim",
-    opts = {
-        ensure_installed = {
-            "lua_ls",
-            "texlab",
-        },
-    },
+    "mason-org/mason.nvim",
     dependencies = {
-        "williamboman/mason.nvim",
+        "mason-org/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     },
     config = function()
         require("mason").setup()
-    end
+        require("mason-lspconfig").setup({
+            ensure_installed = {
+                "lua_ls",
+                "stylua",
+                "texlab",
+                "tex-fmt",
+            },
+        })
+    end,
 }
