@@ -3,8 +3,8 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
         require("lualine").setup({
-            theme = 'onedark',
-            extensions = { 'nvim-tree' },
+            theme = "onedark",
+            extensions = { "nvim-tree" },
         })
     end
 }
