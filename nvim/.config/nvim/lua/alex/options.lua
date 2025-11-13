@@ -1,56 +1,52 @@
-local opt = vim.opt
-
--- auto save, no backups
-opt.autowrite = true
-opt.backup = false
+-- auto save when navigating away from the file
+vim.opt.autowrite = true
 
 -- numbers, relative numbers
-opt.relativenumber = true
-opt.number = true
-opt.numberwidth = 5
+vim.opt.relativenumber = true
+vim.opt.number = true
+vim.opt.numberwidth = 5
 
 --- tabs
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
-opt.autoindent = true
-opt.smartindent = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
 
--- linewrap
-opt.wrap = false
+-- no linewrap
+vim.opt.wrap = false
 
 -- search
-opt.ignorecase = true
-opt.smartcase = true
-opt.hlsearch = true
-opt.incsearch = true
+vim.opt.ignorecase = true -- case-insensitive
+vim.opt.smartcase = true -- case-sensitive if capital letter included in search
+vim.opt.hlsearch = true -- highlights results
+vim.opt.incsearch = true -- search as you type
 
--- colors
-opt.termguicolors = true
-opt.background = "dark"
-opt.cursorline = true
-opt.colorcolumn = "100"
-
--- keep signcolumn always on by default, 3 icons width
-opt.signcolumn = "yes:3"
+-- appearance
+vim.opt.termguicolors = true -- use 24-bit color
+vim.opt.cursorline = true -- highlight current line
+vim.opt.colorcolumn = "100" -- show line at 100 chars (write better code).
+vim.opt.signcolumn = "yes:3" -- keep signcolumn always on by default, 3 icons width
 
 -- minimum number of screen lines above and below cursor
-opt.scrolloff = 10
+-- may want to change this depending on size of your display.
+vim.opt.scrolloff = 10
 
--- shows substitute effects that occur off-screen
-opt.inccommand = "split"
+-- shows substitute effects that occur off-screen in a window at the bottom
+vim.opt.inccommand = "split"
 
 -- statusline on every window
-opt.laststatus = 2
+vim.opt.laststatus = 2
 
--- don't show "-- INSERT --", etc because its already in the lualine
-opt.showmode = false
+-- don't show "-- INSERT --", etc, because its already in the lualine plugin
+vim.opt.showmode = false
 
-opt.backspace = "indent,eol,start"
+-- backspace behaves sanely (allows you to backspace over autoindents, line breaks, start of lines)
+vim.opt.backspace = "indent,eol,start"
 
--- clipboard
-opt.clipboard:append("unnamedplus")
+-- use system clipboard
+vim.opt.clipboard:append("unnamedplus")
 
 -- split window behavior (new vertical windows on right, new horizontal windows below)
-opt.splitright = true
-opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
