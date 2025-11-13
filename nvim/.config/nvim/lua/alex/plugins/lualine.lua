@@ -6,5 +6,5 @@ return {
             theme = "onedark",
             extensions = { "nvim-tree" },
         })
-    end
+    end,
 }

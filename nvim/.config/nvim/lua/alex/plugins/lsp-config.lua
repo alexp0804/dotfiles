@@ -1,8 +1,8 @@
 return {
     "mason-org/mason.nvim",
     dependencies = {
-        "mason-org/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
+        "mason-org/mason-lspconfig.nvim",
     },
     config = function()
         require("mason").setup()
@@ -11,7 +11,6 @@ return {
                 "lua_ls",
                 "stylua",
                 "texlab",
-                "tex-fmt",
             },
         })
     end,
