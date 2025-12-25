@@ -1,4 +1,10 @@
 alias neofetch='fastfetch'
-alias cat='batcat'
+
+if [ -f "/etc/debian_version" ]; then
+    alias cat='batcat'
+else
+    alias cat='bat'
+fi
+
 alias ls='eza --color=auto --group-directories-first --icons=auto --git' 
 alias tree='ls --tree'
