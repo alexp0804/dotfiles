@@ -4,6 +4,7 @@
 [core]
 	editor = vim
 	whitespace = error
+    pager = "if [ ! -z \"$(which diff-so-fancy)\" ]; then diff-so-fancy | less --tabs=4 -RFX; else less; fi"
 [pull]
 	rebase = true
 [status]
